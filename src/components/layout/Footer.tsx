@@ -5,8 +5,8 @@ export function Footer() {
   const navigation = restaurant.navigation.filter(link => footerTargets.has(link.target));
   const socials = Object.entries(restaurant.social).filter(([, url]) => url);
   const delivery = [
-    { label: restaurant.order.uberEatsLabel, url: restaurant.ordering.uberEats },
-    { label: restaurant.order.deliverooLabel, url: restaurant.ordering.deliveroo },
+    { label: restaurant.order.uberEatsLabel, url: restaurant.ordering.uberEatsUrl },
+    { label: restaurant.order.deliverooLabel, url: restaurant.ordering.deliverooUrl },
   ].filter(link => link.url);
   return <footer className="bg-footer text-footer-text py-14 px-5"><div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <div><p className="font-display text-2xl font-black">{restaurant.businessName}</p><p className="text-primary uppercase text-xs font-bold tracking-[.25em] mt-2">{restaurant.footer.tagline}</p></div>

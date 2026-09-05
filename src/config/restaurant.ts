@@ -10,7 +10,7 @@ export const restaurant: RestaurantConfig = {
   googleMapsEmbedUrl: 'https://www.google.com/maps?q=92%20Avenue%20de%20Saint-Ouen%2075018%20Paris&output=embed',
   openingHours: [{ label: 'Ouvert 7j/7', value: '11h00 – 00h00' }],
   social: { instagram: '', facebook: '', tiktok: '' },
-  ordering: { uberEats: '', deliveroo: '', clickAndCollect: '', whatsapp: '' },
+  ordering: { uberEatsUrl: '', deliverooUrl: '', clickCollectUrl: '' },
   navigation: [
     { label: 'Accueil', target: 'hero' }, { label: 'Menu', target: 'menu' }, { label: 'Nos spécialités', target: 'specialites' },
     { label: 'À propos', target: 'about' }, { label: 'Galerie', target: 'gallery' }, { label: 'Avis', target: 'reviews' }, { label: 'Contact', target: 'contact' },

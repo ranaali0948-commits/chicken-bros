@@ -6,7 +6,7 @@ export interface RestaurantConfig {
   phone: string; phoneDisplay: string; email: string; address: string; city: string; postcode: string; country: string;
   googleMapsUrl: string; googleMapsEmbedUrl: string; openingHours: OpeningHours[];
   social: { instagram: string; facebook: string; tiktok: string };
-  ordering: { uberEats: string; deliveroo: string; clickAndCollect: string; whatsapp: string };
+  ordering: { uberEatsUrl: string; deliverooUrl: string; clickCollectUrl: string };
   navigation: NavigationItem[];
   hero: { eyebrow: string; heading: string; highlightedHeading: string; description: string; primaryCTA: string; secondaryCTA: string; image: string; imageFallback: string; imageAlt: string; benefits: Array<{ icon: 'quality' | 'home' | 'leaf' | 'speed'; title: string; description: string }> };
   menu: { eyebrow: string; heading: string; description: string; fullMenuCTA: string; popularHeading: string };
