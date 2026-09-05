@@ -35,14 +35,6 @@ export const menu: RestaurantMenu = { categories: [
 ] };
 
 export const homepageCategories = ['burgers','chicken','wraps-naans','specialites','plats','biryani','crousty','salades'].map(categoryId => menu.categories.find(category => category.id === categoryId)!);
-export const menuGroups = [
-  { id: 'burgers', label: 'Burgers', categoryIds: ['burgers'] },
-  { id: 'chicken', label: 'Chicken', categoryIds: ['chicken'] },
-  { id: 'wraps', label: 'Wraps & Naans', categoryIds: ['wraps-naans', 'naans', 'kebab'] },
-  { id: 'specialites', label: 'Spécialités', categoryIds: ['specialites', 'crousty', 'biryani'] },
-  { id: 'plats', label: 'Plats', categoryIds: ['plats', 'salades'] },
-  { id: 'autres', label: 'Autres', categoryIds: ['menu-enfant', 'accompagnements', 'extras', 'boissons'] },
-] as const;
 const findItem = (name: string) => menu.categories.flatMap(category => category.items).find(menuItem => menuItem.name === name)!;
 export const featuredMenuItems = [
   { ...findItem('Menu 6 Wings'), image: '/images/menu/menu-wings.webp', fallbackImage: images.chicken },

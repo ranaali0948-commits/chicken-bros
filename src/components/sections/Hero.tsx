@@ -7,12 +7,12 @@ export function Hero() {
   const orderUrl = Object.values(restaurant.ordering).find(Boolean);
   return <>
     <section id="hero" className="overflow-hidden bg-background pt-28 pb-10 sm:pt-32 sm:pb-12 lg:pt-36 lg:pb-16">
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-[.9fr_1.1fr] gap-10 lg:gap-16 items-center">
-        <div className="relative z-10 animate-fade-up">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)] gap-9 lg:gap-12 items-center">
+        <div className="relative z-10 min-w-0 animate-fade-up">
           <p className="text-accent text-xs sm:text-sm font-extrabold tracking-[.13em] mb-5">{restaurant.hero.eyebrow}</p>
-          <h1 className="font-display text-[2.65rem] sm:text-6xl lg:text-7xl xl:text-[5.25rem] font-black text-heading leading-[.98] tracking-tight max-w-2xl">{restaurant.hero.heading}<span className="block text-accent mt-2">{restaurant.hero.highlightedHeading}</span></h1>
-          <p className="text-muted text-base sm:text-lg leading-relaxed mt-7 max-w-lg">{restaurant.hero.description}</p>
-          <div className="flex flex-col sm:flex-row gap-3 mt-8"><button onClick={() => scroll('menu')} className="btn-primary group">{restaurant.hero.primaryCTA}<ArrowRight size={17} className="inline ml-2 group-hover:translate-x-1 transition-transform" /></button>{orderUrl ? <a href={orderUrl} className="btn-secondary">{restaurant.hero.secondaryCTA}</a> : <button onClick={() => scroll('order')} className="btn-secondary">{restaurant.hero.secondaryCTA}</button>}</div>
+          <h1 className="font-display text-[2.7rem] sm:text-6xl lg:text-[3.35rem] xl:text-[3.75rem] font-black text-heading leading-[.98] tracking-tight">{restaurant.hero.heading}<span className="block text-accent mt-2 lg:text-[2.1rem] xl:text-[2.3rem] lg:whitespace-nowrap">{restaurant.hero.highlightedHeading}</span></h1>
+          <p className="text-muted text-base sm:text-lg leading-relaxed mt-6 max-w-lg">{restaurant.hero.description}</p>
+          <div className="flex flex-col sm:flex-row gap-3 mt-7"><button onClick={() => scroll('menu')} className="btn-primary group">{restaurant.hero.primaryCTA}<ArrowRight size={17} className="inline ml-2 group-hover:translate-x-1 transition-transform" /></button>{orderUrl ? <a href={orderUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">{restaurant.hero.secondaryCTA}</a> : <button onClick={() => scroll('order')} className="btn-secondary">{restaurant.hero.secondaryCTA}</button>}</div>
         </div>
         <div className="relative min-h-[340px] sm:min-h-[480px] lg:min-h-[550px] px-2 pb-7 animate-fade-in">
           <div className="absolute inset-[8%_2%_5%_9%] organic-shape bg-primary" aria-hidden="true" />

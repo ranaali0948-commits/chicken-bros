@@ -1,0 +1,5 @@
+import { ExternalLink } from 'lucide-react';
+import { restaurant } from '../../config/restaurant';
+import { SectionLabel } from '../ui/SectionHeading';
+
+export function MapSection() { return <section id="map" className="bg-background px-5 py-16 sm:py-20"><div className="max-w-7xl mx-auto"><div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-7"><div><SectionLabel>{restaurant.map.eyebrow}</SectionLabel><h2 className="font-display text-3xl sm:text-4xl font-black text-heading">{restaurant.map.heading}</h2><p className="text-muted mt-2">{restaurant.address}, {restaurant.postcode} {restaurant.city}</p></div><a href={restaurant.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0">{restaurant.map.buttonLabel}<ExternalLink size={16} className="ml-2"/></a></div><div className="overflow-hidden rounded-[2rem] border border-border bg-surface shadow-sm"><iframe src={restaurant.googleMapsEmbedUrl} title={`Carte de ${restaurant.businessName}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full h-[330px] md:h-[460px] border-0" allowFullScreen /></div></div></section>; }

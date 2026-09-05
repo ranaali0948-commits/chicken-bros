@@ -6,6 +6,7 @@ import { ContactSection } from './components/sections/ContactSection';
 import { GallerySection } from './components/sections/GallerySection';
 import { Hero } from './components/sections/Hero';
 import { MenuSection } from './components/sections/MenuSection';
+import { MapSection } from './components/sections/MapSection';
 import { OrderSection } from './components/sections/OrderSection';
 import { ReviewsSection } from './components/sections/ReviewsSection';
 import { restaurant } from './config/restaurant';
@@ -29,6 +30,7 @@ export default function App() {
     {restaurant.sections.reviews && <ReviewsSection />}
     {restaurant.sections.order && <OrderSection />}
     {restaurant.sections.contact && <ContactSection />}
+    <MapSection />
     <Footer />
   </div>;
 }
