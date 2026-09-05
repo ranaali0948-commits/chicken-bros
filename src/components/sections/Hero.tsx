@@ -4,20 +4,33 @@ import { FallbackImage } from '../ui/FallbackImage';
 import { scrollToOrder } from '../../utils/scrollToSection';
 import { navigate } from '../../hooks/useRoute';
 export function Hero() {
-  return <section id="hero" className="relative overflow-hidden bg-accent pt-28 pb-14 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
-      <span className="absolute -left-24 bottom-[-9rem] h-80 w-80 rounded-full border-[4rem] border-white/10" aria-hidden="true"/>
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)] gap-9 lg:gap-12 items-center">
-        <div className="relative z-10 min-w-0 animate-fade-up">
-          <p className="text-primary text-xs sm:text-sm font-extrabold tracking-[.16em] mb-5">{restaurant.hero.eyebrow}</p>
-          <h1 className="font-display text-[clamp(3.4rem,8vw,7.5rem)] font-black text-white leading-[.84] tracking-[-.04em]">{restaurant.hero.heading}<span className="block text-primary mt-2">{restaurant.hero.highlightedHeading}</span></h1>
-          <p className="text-white/80 text-base sm:text-lg leading-relaxed mt-7 max-w-lg">{restaurant.hero.description}</p>
-          <div className="flex flex-col sm:flex-row gap-3 mt-8"><button type="button" onClick={() => navigate('/menu')} className="btn-primary group">{restaurant.hero.primaryCTA}<ArrowRight size={17} className="inline ml-2 group-hover:translate-x-1 transition-transform" /></button><button type="button" onClick={scrollToOrder} className="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-3 font-bold text-white transition-colors hover:bg-white hover:text-heading">{restaurant.hero.secondaryCTA}</button></div>
-        </div>
-        <div className="relative min-h-[390px] sm:min-h-[520px] lg:min-h-[620px] animate-fade-in">
-          <div className="absolute inset-[8%_2%_3%_8%] organic-shape bg-primary" aria-hidden="true" />
-          <div className="absolute inset-[0_3%_7%_0] overflow-hidden rounded-[42%_58%_48%_52%/50%_42%_58%_50%] shadow-[0_28px_70px_rgba(59,42,33,0.32)] rotate-2"><FallbackImage src={restaurant.hero.image} fallbackSrc={restaurant.hero.imageFallback} alt={restaurant.hero.imageAlt} className="w-full h-full object-cover object-center scale-105" /></div>
-          <div className="absolute right-0 bottom-0 z-10 bg-white rounded-2xl py-3 px-4 shadow-xl"><span className="text-accent font-black text-sm">OUVERT 7J/7</span><span className="block text-heading font-bold text-xs mt-0.5">11h00 – 00h00</span></div>
-        </div>
+  const highlightedWords = restaurant.hero.highlightedHeading.split(' ');
+  const finalWord = highlightedWords.pop();
+  const highlightedLead = highlightedWords.join(' ');
+  return <section id="hero" className="relative isolate min-h-[730px] overflow-hidden bg-[var(--color-hero-red)] pt-24 sm:min-h-[780px] sm:pt-28 lg:min-h-[720px] lg:pt-32">
+    <div className="absolute inset-x-0 bottom-[-1px] z-[2] h-[23%] sm:h-[25%] lg:h-[31%]" aria-hidden="true">
+      <svg className="h-full w-full" viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="var(--color-hero-cream)" d="M0,132 C235,24 420,66 617,143 C835,228 1040,252 1440,74 L1440,260 L0,260 Z"/></svg>
+    </div>
+
+    <span className="hero-crumb left-[6%] top-[31%] h-3 w-3 bg-primary" aria-hidden="true"/>
+    <span className="hero-crumb right-[7%] top-[22%] h-2 w-5 rotate-45 bg-white/80" aria-hidden="true"/>
+    <span className="hero-crumb right-[43%] top-[18%] h-2 w-2 bg-primary" aria-hidden="true"/>
+    <svg className="absolute right-[4%] top-[16%] z-50 hidden h-16 w-24 text-primary lg:block" viewBox="0 0 96 64" fill="none" aria-hidden="true"><path d="M5 45c19-30 44-36 82-29M14 57c20-20 39-25 68-23" stroke="currentColor" strokeWidth="5" strokeLinecap="round"/></svg>
+
+    <div className="relative z-30 mx-auto grid max-w-7xl grid-cols-1 px-5 lg:grid-cols-[.82fr_1.18fr] lg:grid-rows-[auto_1fr] lg:gap-x-4 lg:px-8">
+      <div className="min-w-0 animate-fade-up pt-6 sm:pt-8 lg:row-start-1 lg:pt-12">
+        <p className="mb-4 text-xs font-extrabold tracking-[.18em] text-primary sm:text-sm">{restaurant.hero.eyebrow}</p>
+        <h1 className="font-display text-[clamp(3.25rem,12vw,5.8rem)] font-black leading-[.82] tracking-[-.045em] text-white lg:text-[clamp(4.3rem,5.7vw,5.8rem)]">{restaurant.hero.heading}<span className="mt-2 block text-primary"><span className="block whitespace-nowrap">{highlightedLead}</span><span className="block">{finalWord}</span></span></h1>
       </div>
-    </section>;
+
+      <div className="hero-burger-enter relative z-40 -mx-8 -mt-8 h-[295px] sm:-mt-16 sm:h-[390px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:-mt-5 lg:h-[620px] xl:-mr-10">
+        <FallbackImage src={restaurant.hero.image} fallbackSrc={restaurant.hero.imageFallback} alt={restaurant.hero.imageAlt} className="h-full w-full object-contain object-center drop-shadow-[0_22px_18px_rgba(59,42,33,.24)] lg:object-right" />
+      </div>
+
+      <div className="relative z-50 -mt-3 pb-20 sm:-mt-8 sm:pb-24 lg:col-start-1 lg:row-start-2 lg:mt-7 lg:self-start lg:pb-36">
+        <p className="max-w-md text-base leading-relaxed text-white/85 sm:text-lg">{restaurant.hero.description}</p>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row"><button type="button" onClick={() => navigate('/menu')} className="btn-primary group">{restaurant.hero.primaryCTA}<ArrowRight size={17} className="ml-2 inline transition-transform group-hover:translate-x-1" /></button><button type="button" onClick={scrollToOrder} className="inline-flex items-center justify-center rounded-full border border-[var(--color-hero-cream)] px-6 py-3 font-bold text-white transition-colors hover:bg-[var(--color-hero-cream)] hover:text-heading">{restaurant.hero.secondaryCTA}</button></div>
+      </div>
+    </div>
+  </section>;
 }

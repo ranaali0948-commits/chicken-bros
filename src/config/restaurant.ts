@@ -23,7 +23,7 @@ export const restaurant: RestaurantConfig = {
     eyebrow: 'CHICKEN BROS • PARIS 18', heading: 'LE GOÛT', highlightedHeading: 'QUI FAIT LA DIFFÉRENCE.',
     description: 'Burgers, chicken, wraps, naans et plats généreux.',
     primaryCTA: 'Voir le menu', secondaryCTA: 'Commander',
-    image: '/images/hero/hero-food.webp', imageFallback: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1400', imageAlt: 'Burger généreux servi avec des frites',
+    image: '/images/hero/chicken-bros-burger.png', imageFallback: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1400', imageAlt: 'Burger Chicken Bros généreux avec ingrédients en mouvement',
     benefits: [
       { icon: 'quality', title: 'Poulet de qualité', description: 'Des produits sélectionnés' }, { icon: 'home', title: 'Recettes maison', description: 'Du goût à chaque bouchée' },
       { icon: 'leaf', title: 'Options veggie', description: 'Pour tous les goûts' }, { icon: 'speed', title: 'Service rapide', description: 'À emporter ou en livraison' },
