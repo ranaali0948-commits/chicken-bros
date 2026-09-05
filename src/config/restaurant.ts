@@ -10,7 +10,11 @@ export const restaurant: RestaurantConfig = {
   googleMapsEmbedUrl: 'https://www.google.com/maps?q=92%20Avenue%20de%20Saint-Ouen%2075018%20Paris&output=embed',
   openingHours: [{ label: 'Ouvert 7j/7', value: '11h00 – 00h00' }],
   social: { instagram: '', facebook: '', tiktok: '' },
-  ordering: { uberEatsUrl: '', deliverooUrl: '', clickCollectUrl: '' },
+  ordering: {
+    uberEatsUrl: '',
+    deliverooUrl: '',
+    clickCollectUrl: '',
+  },
   navigation: [
     { label: 'Accueil', target: 'hero' }, { label: 'Menu', target: 'menu' }, { label: 'Nos spécialités', target: 'specialites' },
     { label: 'À propos', target: 'about' }, { label: 'Galerie', target: 'gallery' }, { label: 'Avis', target: 'reviews' }, { label: 'Contact', target: 'contact' },
@@ -39,7 +43,7 @@ export const restaurant: RestaurantConfig = {
   },
   gallery: { eyebrow: 'Galerie', heading: 'NOS MEILLEURS MOMENTS' },
   reviews: { eyebrow: 'Avis', heading: 'VOTRE AVIS COMPTE', summary: '', emptyState: 'Les avis vérifiés de nos clients seront bientôt disponibles ici.' },
-  order: { eyebrow: 'Commande', heading: 'COMMANDEZ EN LIGNE', description: 'Choisissez votre plateforme préférée et commandez Chicken Bros en quelques clics.', uberEatsLabel: 'Commander sur Uber Eats', deliverooLabel: 'Commander sur Deliveroo', clickAndCollectLabel: 'Click & Collect', missingLinkLabel: 'Lien à ajouter' },
+  order: { eyebrow: 'Commander', heading: 'COMMANDEZ EN LIGNE', description: 'Choisissez votre plateforme préférée et commandez Chicken Bros en quelques clics.', uberEatsLabel: 'Commander sur Uber Eats', deliverooLabel: 'Commander sur Deliveroo', clickAndCollectLabel: 'Click & Collect', missingLinkLabel: 'Lien à ajouter' },
   map: { eyebrow: 'Nous trouver', heading: 'CHICKEN BROS · PARIS 18', buttonLabel: 'Ouvrir dans Google Maps' },
   contact: { eyebrow: 'Contact', heading: 'CHICKEN BROS', highlightedHeading: '', description: 'Sur place, à emporter ou en livraison : nous sommes ouverts tous les jours.', promptHeading: 'UNE ENVIE DE CHICKEN BROS ?', promptDescription: 'Appelez-nous, trouvez votre itinéraire ou commandez auprès de votre plateforme préférée.', callLabel: 'Appeler', directionsLabel: 'Itinéraire', orderLabel: 'Commander' },
   footer: { tagline: 'Fast Food', rightsText: 'Tous droits réservés.' },
