@@ -11,8 +11,8 @@ export const restaurant: RestaurantConfig = {
   openingHours: [{ label: 'Ouvert 7j/7', value: '11h00 – 00h00' }],
   social: { instagram: '', facebook: '', tiktok: '' },
   ordering: {
-    uberEatsUrl: '',
-    deliverooUrl: '',
+    uberEatsUrl: 'https://www.ubereats.com/fr/store/chicken-bros/J7yKIwtlS_yX-EnfIdAgbw?diningMode=DELIVERY',
+    deliverooUrl: 'https://deliveroo.fr/fr/menu/paris/18eme-grandes-carrieres/chicken-bros-92-avenue-de-saint-ouen',
     clickCollectUrl: '',
   },
   navigation: [
