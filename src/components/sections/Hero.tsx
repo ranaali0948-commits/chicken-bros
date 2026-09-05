@@ -1,7 +1,8 @@
 import { ArrowRight, ChefHat, Clock3, HeartHandshake, Leaf } from 'lucide-react';
 import { restaurant } from '../../config/restaurant';
 import { FallbackImage } from '../ui/FallbackImage';
-import { scrollToOrder, scrollToSection } from '../../utils/scrollToSection';
+import { scrollToOrder } from '../../utils/scrollToSection';
+import { navigate } from '../../hooks/useRoute';
 const benefitIcons = { quality: ChefHat, home: HeartHandshake, leaf: Leaf, speed: Clock3 };
 export function Hero() {
   return <>
@@ -11,7 +12,7 @@ export function Hero() {
           <p className="text-accent text-xs sm:text-sm font-extrabold tracking-[.13em] mb-5">{restaurant.hero.eyebrow}</p>
           <h1 className="font-display text-[2.7rem] sm:text-6xl lg:text-[3.35rem] xl:text-[3.75rem] font-black text-heading leading-[.98] tracking-tight">{restaurant.hero.heading}<span className="block text-accent mt-2 lg:text-[2.1rem] xl:text-[2.3rem] lg:whitespace-nowrap">{restaurant.hero.highlightedHeading}</span></h1>
           <p className="text-muted text-base sm:text-lg leading-relaxed mt-6 max-w-lg">{restaurant.hero.description}</p>
-          <div className="flex flex-col sm:flex-row gap-3 mt-7"><button type="button" onClick={() => scrollToSection('menu')} className="btn-primary group">{restaurant.hero.primaryCTA}<ArrowRight size={17} className="inline ml-2 group-hover:translate-x-1 transition-transform" /></button><button type="button" onClick={scrollToOrder} className="btn-secondary">{restaurant.hero.secondaryCTA}</button></div>
+          <div className="flex flex-col sm:flex-row gap-3 mt-7"><button type="button" onClick={() => navigate('/menu')} className="btn-primary group">{restaurant.hero.primaryCTA}<ArrowRight size={17} className="inline ml-2 group-hover:translate-x-1 transition-transform" /></button><button type="button" onClick={scrollToOrder} className="btn-secondary">{restaurant.hero.secondaryCTA}</button></div>
         </div>
         <div className="relative min-h-[340px] sm:min-h-[480px] lg:min-h-[550px] px-2 pb-7 animate-fade-in">
           <div className="absolute inset-[8%_2%_5%_9%] organic-shape bg-primary" aria-hidden="true" />

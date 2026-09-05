@@ -3,5 +3,10 @@ export function scrollToSection(id: string) {
 }
 
 export function scrollToOrder() {
-  scrollToSection('order');
+  const order = document.getElementById('order');
+  if (order) order.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  else {
+    window.history.pushState({}, '', '/#order');
+    window.dispatchEvent(new Event('chicken-bros:navigate'));
+  }
 }

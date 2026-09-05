@@ -1,36 +1,23 @@
 import { useEffect } from 'react';
 import { Footer } from './components/layout/Footer';
 import { Navbar } from './components/layout/Navbar';
-import { AboutSection } from './components/sections/AboutSection';
-import { ContactSection } from './components/sections/ContactSection';
-import { GallerySection } from './components/sections/GallerySection';
-import { Hero } from './components/sections/Hero';
-import { MenuSection } from './components/sections/MenuSection';
-import { MapSection } from './components/sections/MapSection';
-import { OrderSection } from './components/sections/OrderSection';
-import { ReviewsSection } from './components/sections/ReviewsSection';
 import { restaurant } from './config/restaurant';
+import { useRoute } from './hooks/useRoute';
+import { ContactPage } from './pages/ContactPage';
+import { HomePage } from './pages/HomePage';
+import { MenuPage } from './pages/MenuPage';
 import { theme } from './config/theme';
 
 export default function App() {
+  const route = useRoute();
+  const pathname = window.location.pathname;
   useEffect(() => {
-    document.title = restaurant.seo.title;
-    const setMeta = (selector: string, value: string) => document.querySelector<HTMLMetaElement>(selector)?.setAttribute('content', value);
-    setMeta('meta[name="description"]', restaurant.seo.description);
-    setMeta('meta[name="keywords"]', restaurant.seo.keywords);
-    setMeta('meta[property="og:image"]', restaurant.seo.ogImage);
-  }, []);
-
-  return <div className="bg-background text-heading antialiased" style={{ fontFamily: theme.fontBody }}>
-    <Navbar />
-    {restaurant.sections.hero && <Hero />}
-    {restaurant.sections.menu && <MenuSection />}
-    {restaurant.sections.about && <AboutSection />}
-    {restaurant.sections.gallery && <GallerySection />}
-    {restaurant.sections.reviews && <ReviewsSection />}
-    {restaurant.sections.order && <OrderSection />}
-    {restaurant.sections.contact && <ContactSection />}
-    <MapSection />
-    <Footer />
-  </div>;
+    const title = pathname === '/menu' ? restaurant.seo.menuTitle : pathname === '/contact' ? restaurant.seo.contactTitle : restaurant.seo.title;
+    document.title = title;
+    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', restaurant.seo.description);
+    if (window.location.hash) window.setTimeout(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView({behavior:'smooth'}), 50);
+    else window.scrollTo({ top: 0, left: 0 });
+  }, [route, pathname]);
+  const page = pathname === '/menu' ? <MenuPage key={route}/> : pathname === '/contact' ? <ContactPage/> : <HomePage/>;
+  return <div className="bg-background text-heading antialiased" style={{ fontFamily: theme.fontBody }}><Navbar/>{page}<Footer/></div>;
 }

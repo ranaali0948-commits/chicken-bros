@@ -16,8 +16,8 @@ export const restaurant: RestaurantConfig = {
     clickCollectUrl: '',
   },
   navigation: [
-    { label: 'Accueil', target: 'hero' }, { label: 'Menu', target: 'menu' }, { label: 'Nos spécialités', target: 'specialites' },
-    { label: 'À propos', target: 'about' }, { label: 'Galerie', target: 'gallery' }, { label: 'Avis', target: 'reviews' }, { label: 'Contact', target: 'contact' },
+    { label: 'Accueil', href: '/' }, { label: 'Menu', href: '/menu' }, { label: 'À propos', href: '/#about' },
+    { label: 'Galerie', href: '/#gallery' }, { label: 'Contact', href: '/contact' },
   ],
   hero: {
     eyebrow: 'CHICKEN BROS • PARIS 18', heading: 'LE GOÛT', highlightedHeading: 'QUI FAIT LA DIFFÉRENCE.',
@@ -43,10 +43,10 @@ export const restaurant: RestaurantConfig = {
   },
   gallery: { eyebrow: 'Galerie', heading: 'NOS MEILLEURS MOMENTS' },
   reviews: { eyebrow: 'Avis', heading: 'VOTRE AVIS COMPTE', summary: '', emptyState: 'Les avis vérifiés de nos clients seront bientôt disponibles ici.' },
-  order: { eyebrow: 'Commander', heading: 'COMMANDEZ EN LIGNE', description: 'Choisissez votre plateforme préférée et commandez Chicken Bros en quelques clics.', uberEatsLabel: 'Commander sur Uber Eats', deliverooLabel: 'Commander sur Deliveroo', clickAndCollectLabel: 'Click & Collect', missingLinkLabel: 'Lien à ajouter' },
+  order: { eyebrow: 'Commander', heading: 'VOTRE CHICKEN BROS, OÙ VOUS VOULEZ.', description: 'Commandez en quelques clics sur votre plateforme préférée.', uberEatsLabel: 'Commander sur Uber Eats', deliverooLabel: 'Commander sur Deliveroo', clickAndCollectLabel: 'Click & Collect', missingLinkLabel: 'Lien à ajouter' },
   map: { eyebrow: 'Nous trouver', heading: 'CHICKEN BROS · PARIS 18', buttonLabel: 'Ouvrir dans Google Maps' },
-  contact: { eyebrow: 'Contact', heading: 'CHICKEN BROS', highlightedHeading: '', description: 'Sur place, à emporter ou en livraison : nous sommes ouverts tous les jours.', promptHeading: 'UNE ENVIE DE CHICKEN BROS ?', promptDescription: 'Appelez-nous, trouvez votre itinéraire ou commandez auprès de votre plateforme préférée.', callLabel: 'Appeler', directionsLabel: 'Itinéraire', orderLabel: 'Commander' },
+  contact: { eyebrow: 'Contact', heading: 'VENEZ CHEZ', highlightedHeading: 'CHICKEN BROS', description: 'Sur place, à emporter ou en livraison : nous sommes ouverts tous les jours.', promptHeading: 'UNE ENVIE DE CHICKEN BROS ?', promptDescription: 'Appelez-nous, trouvez votre itinéraire ou commandez auprès de votre plateforme préférée.', callLabel: 'Appeler', directionsLabel: 'Itinéraire', orderLabel: 'Commander' },
   footer: { tagline: 'Fast Food', rightsText: 'Tous droits réservés.' },
   sections: { hero: true, menu: true, about: true, gallery: true, reviews: false, order: true, contact: true },
-  seo: { title: 'Chicken Bros | Fast Food à Paris 18', description: 'Découvrez Chicken Bros au 92 Avenue de Saint-Ouen, Paris 18 : burgers, chicken, wraps, naans, biryani, plats et bien plus. Sur place, à emporter ou en livraison.', keywords: 'Chicken Bros, fast food Paris 18, burgers, chicken, wraps, naans, biryani', ogImage: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+  seo: { title: 'Chicken Bros | Fast Food Paris 18', menuTitle: 'Menu Chicken Bros | Burgers, Chicken, Wraps & Naans', contactTitle: 'Chicken Bros Paris 18 | Adresse & Horaires', description: 'Découvrez Chicken Bros au 92 Avenue de Saint-Ouen, Paris 18 : burgers, chicken, wraps, naans, biryani, plats et bien plus. Sur place, à emporter ou en livraison.', keywords: 'Chicken Bros, fast food Paris 18, burgers, chicken, wraps, naans, biryani', ogImage: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1200' },
 };
