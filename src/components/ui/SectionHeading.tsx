@@ -1,0 +1,3 @@
+import type { ReactNode } from 'react';
+export function SectionLabel({ children }: { children: ReactNode }) { return <span className="inline-flex items-center gap-2 text-brand-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"><span className="w-6 h-px bg-brand-500 inline-block" />{children}</span>; }
+export function SectionHeading({ eyebrow, heading, description }: { eyebrow: string; heading: ReactNode; description?: string }) { return <><SectionLabel>{eyebrow}</SectionLabel><h2 className="font-display text-4xl sm:text-5xl font-bold text-white mt-1">{heading}</h2>{description && <p className="text-charcoal-300 mt-4 max-w-lg mx-auto leading-relaxed">{description}</p>}</>; }

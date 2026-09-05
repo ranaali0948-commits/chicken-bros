@@ -1,0 +1,2 @@
+import { restaurant } from '../../config/restaurant';
+export function OrderSection(){return <section id="order" className="bg-charcoal-900 py-24 px-6 text-center"><h2 className="font-display text-4xl font-bold text-white">Order from {restaurant.shortName}</h2><a href={restaurant.ordering.clickAndCollect} className="inline-block mt-8 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-full">Click &amp; Collect</a></section>}
