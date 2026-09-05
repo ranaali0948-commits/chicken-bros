@@ -16,13 +16,13 @@ export function Hero() {
     <span className="hero-crumb right-[7%] top-[22%] h-2 w-5 rotate-45 bg-white/80" aria-hidden="true"/>
     <span className="hero-crumb right-[43%] top-[18%] h-2 w-2 bg-primary" aria-hidden="true"/>
     <svg className="absolute right-[4%] top-[16%] z-50 hidden h-16 w-24 text-primary lg:block" viewBox="0 0 96 64" fill="none" aria-hidden="true"><path d="M5 45c19-30 44-36 82-29M14 57c20-20 39-25 68-23" stroke="currentColor" strokeWidth="5" strokeLinecap="round"/></svg>
-    <img src="/images/hero/hero-wrap.png" alt="" aria-hidden="true" className="pointer-events-none absolute bottom-[115px] -left-12 z-10 w-[105px] rotate-6 object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.16)] sm:-bottom-5 sm:-left-40 sm:w-64 sm:rotate-12 lg:-bottom-20 lg:-left-48 lg:w-[360px]"/>
+    <img src="/images/hero/hero-wrap.png" alt="" aria-hidden="true" className="pointer-events-none absolute bottom-[112px] left-[-45px] z-10 w-[125px] -rotate-[8deg] object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.16)] sm:-bottom-5 sm:-left-40 sm:w-64 sm:rotate-12 lg:-bottom-20 lg:-left-48 lg:w-[360px]"/>
     <img src="/images/hero/hero-fries.png" alt="" aria-hidden="true" className="pointer-events-none absolute right-[-10px] top-[85px] z-10 w-[150px] -rotate-6 object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.14)] sm:-right-32 sm:top-24 sm:w-52 sm:-rotate-12 lg:-right-48 lg:top-36 lg:w-[330px]"/>
 
     <div className="relative z-30 mx-auto grid max-w-7xl grid-cols-1 px-5 lg:grid-cols-[.82fr_1.18fr] lg:grid-rows-[auto_1fr] lg:gap-x-4 lg:px-8">
       <div className="relative min-w-0 animate-fade-up pt-5 sm:pt-8 lg:row-start-1 lg:pt-12">
         <p className="mb-4 text-xs font-extrabold tracking-[.18em] text-primary sm:text-sm">{restaurant.hero.eyebrow}</p>
-        <h1 className="hero-mobile-word pointer-events-none absolute left-[30%] top-12 z-0 -translate-x-1/2 whitespace-nowrap font-display text-[clamp(3.8rem,16vw,4.8rem)] font-black leading-none lg:hidden">{restaurant.hero.heading}</h1>
+        <h1 className="hero-mobile-word pointer-events-none absolute left-[45%] top-12 z-0 -translate-x-1/2 whitespace-nowrap font-display text-[clamp(4rem,17vw,5rem)] font-black leading-none lg:hidden">{restaurant.hero.heading}</h1>
         <h1 className="hidden font-display font-black leading-[.82] tracking-[-.045em] text-white lg:block lg:text-[clamp(4.3rem,5.7vw,5.8rem)]">{restaurant.hero.heading}<span className="mt-2 block text-primary"><span className="block whitespace-nowrap">{highlightedLead}</span><span className="block">{finalWord}</span></span></h1>
       </div>
 
