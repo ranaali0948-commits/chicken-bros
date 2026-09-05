@@ -12,11 +12,32 @@
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--color-background);
+    color: var(--color-text);
   }
 
   * {
     box-sizing: border-box;
   }
+}
+
+@layer components {
+  .btn-primary { @apply inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-bold text-heading transition-all hover:bg-primary-hover hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heading; }
+  .btn-secondary { @apply inline-flex items-center justify-center rounded-full border border-border bg-surface px-6 py-3 font-bold text-heading transition-all hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary; }
+  .detail-row { @apply flex items-center gap-4 rounded-2xl border border-border bg-surface p-4 text-accent; }
+  .detail-row > div > span { @apply block text-[11px] font-bold uppercase tracking-wider text-muted; }
+  .detail-row > div > strong { @apply mt-1 block text-sm text-heading; }
+  .social-button { @apply flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-heading transition-colors hover:border-accent hover:text-accent; }
+  .footer-heading { @apply mb-3 text-xs font-bold uppercase tracking-[.18em] text-primary; }
+  .organic-shape { border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%; transform: rotate(-4deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 @layer utilities {

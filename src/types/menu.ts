@@ -3,7 +3,7 @@ export interface MenuItem {
   name: string;
   description: string;
   price: string;
-  image: string;
+  image?: string;
   badge?: string;
   featured?: boolean;
   available?: boolean;
@@ -15,6 +15,7 @@ export interface MenuCategory {
   id: string;
   name: string;
   description?: string;
+  image: string;
   items: MenuItem[];
 }
 

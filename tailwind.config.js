@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        display: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -12,6 +12,13 @@ export default {
         'background-alt': 'var(--color-background-alt)',
         surface: 'var(--color-surface)',
         footer: 'var(--color-footer-background)',
+        'footer-text': 'var(--color-footer-text)',
+        heading: 'var(--color-heading)',
+        muted: 'var(--color-text-muted)',
+        primary: 'var(--color-primary)',
+        'primary-hover': 'var(--color-primary-hover)',
+        accent: 'var(--color-accent)',
+        border: 'var(--color-border)',
         brand: {
           50:  '#fff8ed',
           100: '#ffefd0',
@@ -23,18 +30,6 @@ export default {
           700: '#c74700',
           800: '#9e3800',
           900: '#7f2f00',
-        },
-        charcoal: {
-          50:  '#f5f5f5',
-          100: '#e8e8e8',
-          200: '#d1d1d1',
-          300: '#a8a8a8',
-          400: '#808080',
-          500: '#5a5a5a',
-          600: '#404040',
-          700: '#2a2a2a',
-          800: '#1a1a1a',
-          900: '#0d0d0d',
         },
       },
       animation: {

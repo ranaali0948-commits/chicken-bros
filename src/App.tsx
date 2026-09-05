@@ -20,7 +20,7 @@ export default function App() {
     setMeta('meta[property="og:image"]', restaurant.seo.ogImage);
   }, []);
 
-  return <div className="bg-charcoal-900 antialiased" style={{ fontFamily: theme.fontBody }}>
+  return <div className="bg-background text-heading antialiased" style={{ fontFamily: theme.fontBody }}>
     <Navbar />
     {restaurant.sections.hero && <Hero />}
     {restaurant.sections.menu && <MenuSection />}

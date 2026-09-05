@@ -1,4 +1,4 @@
 export const theme = {
-  fontDisplay: 'Playfair Display, Georgia, serif',
+  fontDisplay: 'Montserrat, Inter, system-ui, sans-serif',
   fontBody: 'Inter, system-ui, sans-serif',
 } as const;
