@@ -47,7 +47,12 @@
   .tile-copy b { @apply text-lg text-primary; }
   .hero-crumb { @apply absolute z-50 rounded-full; animation: crumbIn .55s ease-out both; }
   .hero-burger-enter { animation: burgerIn .65s cubic-bezier(.2,.8,.2,1) both; }
-  .hero-mobile-word { -webkit-text-stroke: 1px rgba(255, 255, 255, .3); color: transparent; }
+  .hero-mobile-word { -webkit-text-stroke: 1px rgba(255, 255, 255, .75); color: transparent; opacity: .13; }
+  .hero-mobile-actions { width: calc(100vw - 36px); }
+}
+
+@media (min-width: 640px) {
+  .hero-mobile-actions { width: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
