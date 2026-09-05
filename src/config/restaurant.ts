@@ -3,7 +3,7 @@ import type { RestaurantConfig } from '../types/restaurant';
 export const restaurant: RestaurantConfig = {
   businessName: 'Chicken Bros', shortName: 'CHICKEN BROS', tagline: 'Fast Food',
   description: 'Burgers, chicken, wraps, naans, biryani, plats et bien plus à Paris 18.',
-  logo: '', // Add the official logo at /public/images/logo/chicken-bros-logo.webp, then set this path.
+  logo: '/images/logo/chicken-bros-logo.webp',
   favicon: '', phone: '+33765272890', phoneDisplay: '07 65 27 28 90', email: '',
   address: '92 Avenue de Saint-Ouen', city: 'Paris', postcode: '75018', country: 'France',
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=92%20Avenue%20de%20Saint-Ouen%2075018%20Paris',
@@ -18,7 +18,7 @@ export const restaurant: RestaurantConfig = {
     eyebrow: 'BURGERS • WRAPS • NAANS • PLATS • ET PLUS', heading: 'UN BON REPAS POUR UNE', highlightedHeading: 'BELLE JOURNÉE.',
     description: 'Burgers, wraps, naans, plats et bien plus encore. Toujours frais, toujours savoureux.',
     primaryCTA: 'Voir le menu', secondaryCTA: 'Commander en ligne',
-    image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1400', imageAlt: 'Burger généreux servi avec des frites',
+    image: '/images/hero/hero-food.webp', imageFallback: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1400', imageAlt: 'Burger généreux servi avec des frites',
     benefits: [
       { icon: 'quality', title: 'Poulet de qualité', description: 'Des produits sélectionnés' }, { icon: 'home', title: 'Recettes maison', description: 'Du goût à chaque bouchée' },
       { icon: 'leaf', title: 'Options veggie', description: 'Pour tous les goûts' }, { icon: 'speed', title: 'Service rapide', description: 'À emporter ou en livraison' },
@@ -29,7 +29,7 @@ export const restaurant: RestaurantConfig = {
     eyebrow: 'À propos', heading: 'UNE PASSION POUR LE', highlightedHeading: 'BON GOÛT',
     description: 'Chez Chicken Bros, nous aimons les recettes généreuses, les saveurs qui font plaisir et les repas à partager.',
     secondaryDescription: 'Burgers, chicken, wraps, naans et plats : notre menu réunit différentes saveurs pour satisfaire toutes les envies.',
-    primaryImage: 'https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=900', primaryImageAlt: 'Burger fraîchement préparé',
+    primaryImage: '/images/about/about-main.webp', primaryImageFallback: 'https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=900', primaryImageAlt: 'Burger fraîchement préparé',
     secondaryImage: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600', secondaryImageAlt: 'Repas généreux à partager',
     pillars: [
       { icon: 'flame', title: 'Des saveurs généreuses', description: 'Une carte pensée pour les grandes comme les petites faims.' }, { icon: 'leaf', title: 'Pour tous les goûts', description: 'Des recettes variées, avec plusieurs options veggie.' },
@@ -38,7 +38,7 @@ export const restaurant: RestaurantConfig = {
   },
   gallery: { eyebrow: 'Galerie', heading: 'NOS MEILLEURS MOMENTS' },
   reviews: { eyebrow: 'Avis', heading: 'VOTRE AVIS COMPTE', summary: '', emptyState: 'Les avis vérifiés de nos clients seront bientôt disponibles ici.' },
-  order: { eyebrow: 'À vous de choisir', heading: 'COMMANDEZ EN LIGNE', description: 'Retrouvez Chicken Bros sur vos plateformes de livraison préférées ou venez nous voir directement au restaurant.' },
+  order: { eyebrow: 'À vous de choisir', heading: 'COMMANDEZ EN LIGNE', description: 'Retrouvez Chicken Bros sur vos plateformes préférées ou venez directement au restaurant.' },
   contact: { eyebrow: 'Nous trouver', heading: 'VENEZ CHEZ', highlightedHeading: 'CHICKEN BROS', description: 'Sur place, à emporter ou en livraison : nous sommes ouverts tous les jours.', promptHeading: 'Une envie de Chicken Bros ?', promptDescription: 'Appelez-nous, trouvez votre itinéraire ou commandez auprès de votre plateforme préférée.', callLabel: 'Appeler', directionsLabel: 'Itinéraire', orderLabel: 'Commander' },
   footer: { tagline: 'Fast Food', rightsText: 'Tous droits réservés.' },
   sections: { hero: true, menu: true, about: true, gallery: true, reviews: true, order: true, contact: true },

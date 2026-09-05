@@ -8,9 +8,9 @@ export interface RestaurantConfig {
   social: { instagram: string; facebook: string; tiktok: string };
   ordering: { uberEats: string; deliveroo: string; clickAndCollect: string; whatsapp: string };
   navigation: NavigationItem[];
-  hero: { eyebrow: string; heading: string; highlightedHeading: string; description: string; primaryCTA: string; secondaryCTA: string; image: string; imageAlt: string; benefits: Array<{ icon: 'quality' | 'home' | 'leaf' | 'speed'; title: string; description: string }> };
+  hero: { eyebrow: string; heading: string; highlightedHeading: string; description: string; primaryCTA: string; secondaryCTA: string; image: string; imageFallback: string; imageAlt: string; benefits: Array<{ icon: 'quality' | 'home' | 'leaf' | 'speed'; title: string; description: string }> };
   menu: { eyebrow: string; heading: string; description: string; fullMenuCTA: string; popularHeading: string };
-  about: { eyebrow: string; heading: string; highlightedHeading: string; description: string; secondaryDescription: string; primaryImage: string; primaryImageAlt: string; secondaryImage: string; secondaryImageAlt: string; pillars: Array<{ icon: 'flame' | 'leaf' | 'heart' | 'truck'; title: string; description: string }> };
+  about: { eyebrow: string; heading: string; highlightedHeading: string; description: string; secondaryDescription: string; primaryImage: string; primaryImageFallback: string; primaryImageAlt: string; secondaryImage: string; secondaryImageAlt: string; pillars: Array<{ icon: 'flame' | 'leaf' | 'heart' | 'truck'; title: string; description: string }> };
   gallery: { eyebrow: string; heading: string };
   reviews: { eyebrow: string; heading: string; summary: string; emptyState: string };
   order: { eyebrow: string; heading: string; description: string };

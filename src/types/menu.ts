@@ -4,6 +4,7 @@ export interface MenuItem {
   description: string;
   price: string;
   image?: string;
+  fallbackImage?: string;
   badge?: string;
   featured?: boolean;
   available?: boolean;
@@ -16,6 +17,7 @@ export interface MenuCategory {
   name: string;
   description?: string;
   image: string;
+  fallbackImage: string;
   items: MenuItem[];
 }
 
