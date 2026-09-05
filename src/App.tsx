@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Footer } from './components/layout/Footer';
 import { Navbar } from './components/layout/Navbar';
 import { restaurant } from './config/restaurant';
@@ -11,13 +11,15 @@ import { theme } from './config/theme';
 export default function App() {
   const route = useRoute();
   const pathname = window.location.pathname;
+  const previousPathname = useRef(pathname);
   useEffect(() => {
     const title = pathname === '/menu' ? restaurant.seo.menuTitle : pathname === '/contact' ? restaurant.seo.contactTitle : restaurant.seo.title;
     document.title = title;
     document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', restaurant.seo.description);
     if (window.location.hash) window.setTimeout(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView({behavior:'smooth'}), 50);
-    else window.scrollTo({ top: 0, left: 0 });
+    else if (previousPathname.current !== pathname) window.scrollTo({ top: 0, left: 0 });
+    previousPathname.current = pathname;
   }, [route, pathname]);
-  const page = pathname === '/menu' ? <MenuPage key={route}/> : pathname === '/contact' ? <ContactPage/> : <HomePage/>;
+  const page = pathname === '/menu' ? <MenuPage route={route}/> : pathname === '/contact' ? <ContactPage/> : <HomePage/>;
   return <div className="bg-background text-heading antialiased" style={{ fontFamily: theme.fontBody }}><Navbar/>{page}<Footer/></div>;
 }
