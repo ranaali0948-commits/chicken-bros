@@ -3,7 +3,7 @@ import type { RestaurantConfig } from '../types/restaurant';
 export const restaurant: RestaurantConfig = {
   businessName: 'Chicken Bros', shortName: 'CHICKEN BROS', tagline: 'Fast Food',
   description: 'Burgers, chicken, wraps, naans, biryani, plats et bien plus à Paris 18.',
-  logo: '/images/logo/chicken-bros-logo.webp',
+  logo: '/images/logo/chicken-bros-logo.png',
   favicon: '', phone: '+33765272890', phoneDisplay: '07 65 27 28 90', email: '',
   address: '92 Avenue de Saint-Ouen', city: 'Paris', postcode: '75018', country: 'France',
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=92%20Avenue%20de%20Saint-Ouen%2075018%20Paris',
