@@ -76,11 +76,11 @@ export function MenuPage({ route }: MenuPageProps) {
         className="min-h-screen pt-20 transition-colors duration-500"
         style={{ backgroundColor: look.bg, color: look.ink }}
       >
-        <section className="mx-auto min-h-[calc(100vh-5rem)] max-w-[1500px] px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
+        <section className="relative mx-auto min-h-[calc(100vh-5rem)] max-w-[1500px] px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
           <button
             type="button"
             onClick={() => setSelectedItem(null)}
-            className="group inline-flex items-center gap-2 text-xs font-black uppercase tracking-[.18em]"
+            className="group absolute right-5 top-5 z-30 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[.18em] sm:right-8 sm:top-7 lg:right-12 lg:top-9"
           >
             <span
               className="flex h-9 w-9 items-center justify-center rounded-full border transition-transform group-hover:-translate-x-1"
