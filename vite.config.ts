@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { restaurant } from './src/config/restaurant';
 
@@ -67,10 +67,7 @@ function productionSeoPlugin() {
       const homeHtml = await readFile(resolve(outputDirectory, 'index.html'), 'utf8');
       for (const page of [restaurant.seo.pages.menu, restaurant.seo.pages.contact]) {
         const routeHtml = replaceSeoHead(homeHtml, page);
-        const routeDirectory = resolve(outputDirectory, page.path.slice(1));
-        await mkdir(routeDirectory, { recursive: true });
         await writeFile(resolve(outputDirectory, `${page.path.slice(1)}.html`), routeHtml);
-        await writeFile(resolve(routeDirectory, 'index.html'), routeHtml);
       }
     },
   };
