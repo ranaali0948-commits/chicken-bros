@@ -91,34 +91,36 @@ export function MenuPage({ route }: MenuPageProps) {
             Tous les produits
           </button>
 
-          <div className="grid min-h-[620px] items-center gap-10 py-8 lg:grid-cols-[.9fr_1.1fr] lg:gap-6 lg:py-0">
-            <div className="relative z-20 max-w-xl">
-              <p
-                className="mb-4 text-[10px] font-black uppercase tracking-[.28em]"
-                style={{ color: look.accent }}
-              >
-                Chicken Bros · {category.name}
-              </p>
+          <div className="grid min-h-[620px] items-center gap-8 pb-8 pt-20 lg:grid-cols-[.9fr_1.1fr] lg:gap-6 lg:py-0">
+            <div className="contents lg:relative lg:z-20 lg:block lg:max-w-xl">
+              <div className="order-1">
+                <p
+                  className="mb-4 text-[10px] font-black uppercase tracking-[.28em]"
+                  style={{ color: look.accent }}
+                >
+                  Chicken Bros · {category.name}
+                </p>
 
-              <h1 className="font-display text-[clamp(3.4rem,7.5vw,7.8rem)] font-black uppercase leading-[.78] tracking-[-.065em]">
-                {selectedItem.name}
-              </h1>
+                <h1 className="font-display text-[clamp(3.4rem,7.5vw,7.8rem)] font-black uppercase leading-[.78] tracking-[-.065em]">
+                  {selectedItem.name}
+                </h1>
 
-              {selectedItem.description && (
-                <div className="mt-7 max-w-md">
-                  <p
-                    className="mb-2 text-[10px] font-black uppercase tracking-[.24em]"
-                    style={{ color: look.accent }}
-                  >
-                    Ingrédients
-                  </p>
-                  <p className="text-sm font-medium leading-relaxed opacity-75 sm:text-base">
-                    {selectedItem.description}
-                  </p>
-                </div>
-              )}
+                {selectedItem.description && (
+                  <div className="mt-7 max-w-md">
+                    <p
+                      className="mb-2 text-[10px] font-black uppercase tracking-[.24em]"
+                      style={{ color: look.accent }}
+                    >
+                      Ingrédients
+                    </p>
+                    <p className="text-sm font-medium leading-relaxed opacity-75 sm:text-base">
+                      {selectedItem.description}
+                    </p>
+                  </div>
+                )}
+              </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="order-3 flex flex-wrap items-center gap-4 lg:mt-8">
                 <strong className="font-display text-4xl font-black tracking-[-.05em]">
                   {selectedItem.price}
                 </strong>
@@ -137,7 +139,7 @@ export function MenuPage({ route }: MenuPageProps) {
                 )}
               </div>
 
-              <div className="mt-10 grid max-w-lg grid-cols-3 border-y" style={{ borderColor: `${look.ink}55` }}>
+              <div className="order-4 grid max-w-lg grid-cols-3 border-y lg:mt-10" style={{ borderColor: `${look.ink}55` }}>
                 <div className="py-4 pr-3">
                   <span className="block text-[9px] font-black uppercase tracking-[.2em] opacity-55">Catégorie</span>
                   <strong className="mt-1 block text-xs uppercase">{category.name}</strong>
@@ -153,7 +155,7 @@ export function MenuPage({ route }: MenuPageProps) {
               </div>
             </div>
 
-            <div className="relative flex min-h-[420px] items-center justify-center lg:min-h-[650px]">
+            <div className="relative order-2 flex min-h-[420px] items-center justify-center lg:order-none lg:min-h-[650px]">
               <span
                 aria-hidden="true"
                 className="absolute h-[72%] w-[72%] rounded-full border-[38px] opacity-20 sm:border-[55px]"
