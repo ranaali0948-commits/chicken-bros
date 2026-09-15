@@ -65,7 +65,8 @@ export function applySeo(pathname: string) {
   const canonical = absoluteUrl(page.path);
   const image = absoluteUrl(restaurant.seo.ogImage);
 
-  document.title = page.title;
+  // Keep the browser tab compact; route-specific SEO titles remain in the generated HTML and social metadata.
+  document.title = restaurant.businessName;
   document.documentElement.lang = 'fr';
   setCanonical(canonical);
   setMeta('meta[name="description"]', { name: 'description', content: page.description });
