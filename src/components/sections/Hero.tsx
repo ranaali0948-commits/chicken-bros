@@ -16,18 +16,20 @@ export function Hero() {
     <span className="hero-crumb right-[7%] top-[22%] h-2 w-5 rotate-45 bg-white/80" aria-hidden="true"/>
     <span className="hero-crumb right-[43%] top-[18%] h-2 w-2 bg-primary" aria-hidden="true"/>
     <svg className="absolute right-[4%] top-[16%] z-50 hidden h-16 w-24 text-primary lg:block" viewBox="0 0 96 64" fill="none" aria-hidden="true"><path d="M5 45c19-30 44-36 82-29M14 57c20-20 39-25 68-23" stroke="currentColor" strokeWidth="5" strokeLinecap="round"/></svg>
-    <img src="/images/hero/hero-wrap.png" alt="" aria-hidden="true" className="pointer-events-none absolute bottom-[100px] left-[-58px] z-10 w-[181px] rotate-0 object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.16)] sm:-bottom-5 sm:-left-40 sm:w-64 sm:rotate-12 lg:-bottom-20 lg:-left-48 lg:w-[360px]"/>
-    <img src="/images/hero/hero-fries.png" alt="" aria-hidden="true" className="pointer-events-none absolute right-[-10px] top-[85px] z-10 w-[150px] -rotate-6 object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.14)] sm:-right-32 sm:top-24 sm:w-52 sm:-rotate-12 lg:-right-48 lg:top-36 lg:w-[330px]"/>
+    <img src="/images/hero/hero-wrap.png" alt="" aria-hidden="true" width="1254" height="1254" className="pointer-events-none absolute bottom-[100px] left-[-58px] z-10 w-[181px] rotate-0 object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.16)] sm:-bottom-5 sm:-left-40 sm:w-64 sm:rotate-12 lg:-bottom-20 lg:-left-48 lg:w-[360px]"/>
+    <img src="/images/hero/hero-fries.png" alt="" aria-hidden="true" width="1312" height="1199" className="pointer-events-none absolute right-[-10px] top-[85px] z-10 w-[150px] -rotate-6 object-contain drop-shadow-[0_16px_14px_rgba(59,42,33,.14)] sm:-right-32 sm:top-24 sm:w-52 sm:-rotate-12 lg:-right-48 lg:top-36 lg:w-[330px]"/>
 
     <div className="relative z-30 mx-auto grid max-w-7xl grid-cols-1 px-5 lg:grid-cols-[.82fr_1.18fr] lg:grid-rows-[auto_1fr] lg:gap-x-4 lg:px-8">
       <div className="relative min-w-0 animate-fade-up pt-5 sm:pt-8 lg:row-start-1 lg:pt-12">
         <p className="mb-4 text-xs font-extrabold tracking-[.18em] text-primary sm:text-sm">{restaurant.hero.eyebrow}</p>
-        <h1 className="hero-mobile-word pointer-events-none absolute left-[46%] top-12 z-0 -translate-x-1/2 whitespace-nowrap font-display text-[clamp(4rem,17vw,5rem)] font-black leading-none lg:hidden">{restaurant.hero.heading}</h1>
-        <h1 className="hidden font-display font-black leading-[.82] tracking-[-.045em] text-white lg:block lg:text-[clamp(4.3rem,5.7vw,5.8rem)]">{restaurant.hero.heading}<span className="mt-2 block text-primary"><span className="block whitespace-nowrap">{highlightedLead}</span><span className="block">{finalWord}</span></span></h1>
+        <h1>
+          <span className="hero-mobile-word pointer-events-none absolute left-[46%] top-12 z-0 -translate-x-1/2 whitespace-nowrap font-display text-[clamp(4rem,17vw,5rem)] font-black leading-none lg:hidden">{restaurant.hero.heading}</span>
+          <span className="hidden font-display font-black leading-[.82] tracking-[-.045em] text-white lg:block lg:text-[clamp(4.3rem,5.7vw,5.8rem)]">{restaurant.hero.heading}<span className="mt-2 block text-primary"><span className="block whitespace-nowrap">{highlightedLead}</span><span className="block">{finalWord}</span></span></span>
+        </h1>
       </div>
 
       <div className="hero-burger-enter relative z-40 mx-auto -mt-2 aspect-square min-w-0 w-[clamp(365px,96vw,460px)] sm:-mx-10 sm:-mt-6 sm:h-[470px] sm:w-auto lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:-mt-5 lg:h-[620px] xl:-mr-10">
-        <FallbackImage src={restaurant.hero.image} fallbackSrc={restaurant.hero.imageFallback} alt={restaurant.hero.imageAlt} className="h-auto w-full object-contain object-center drop-shadow-[0_22px_18px_rgba(59,42,33,.24)] sm:h-full lg:object-right" />
+        <FallbackImage src={restaurant.hero.image} fallbackSrc={restaurant.hero.imageFallback} alt={restaurant.hero.imageAlt} width="1254" height="1254" fetchPriority="high" className="h-auto w-full object-contain object-center drop-shadow-[0_22px_18px_rgba(59,42,33,.24)] sm:h-full lg:object-right" />
       </div>
 
       <div className="relative z-50 min-w-0 -mt-3 pb-20 sm:-mt-20 sm:pb-24 lg:col-start-1 lg:row-start-2 lg:mt-7 lg:self-start lg:pb-36">

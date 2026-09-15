@@ -4,7 +4,7 @@ export const restaurant: RestaurantConfig = {
   businessName: 'Chicken Bros', shortName: 'CHICKEN BROS', tagline: 'Fast Food',
   description: 'Burgers, chicken, wraps, naans, biryani, plats et bien plus à Paris 18.',
   logo: '/images/logo/chicken-bros-logo.png',
-  favicon: '', phone: '+33765272890', phoneDisplay: '07 65 27 28 90', email: '',
+  favicon: '/favicon.ico', phone: '+33765272890', phoneDisplay: '07 65 27 28 90', email: '',
   address: '92 Avenue de Saint-Ouen', city: 'Paris', postcode: '75018', country: 'France',
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=92%20Avenue%20de%20Saint-Ouen%2075018%20Paris',
   googleMapsEmbedUrl: 'https://www.google.com/maps?q=92%20Avenue%20de%20Saint-Ouen%2075018%20Paris&output=embed',
@@ -48,5 +48,30 @@ export const restaurant: RestaurantConfig = {
   contact: { eyebrow: 'Contact', heading: 'VENEZ CHEZ', highlightedHeading: 'CHICKEN BROS', description: 'Sur place, à emporter ou en livraison : nous sommes ouverts tous les jours.', promptHeading: 'UNE ENVIE DE CHICKEN BROS ?', promptDescription: 'Appelez-nous, trouvez votre itinéraire ou commandez auprès de votre plateforme préférée.', callLabel: 'Appeler', directionsLabel: 'Itinéraire', orderLabel: 'Commander' },
   footer: { tagline: 'Fast Food', rightsText: 'Tous droits réservés.' },
   sections: { hero: true, menu: true, about: true, gallery: true, reviews: false, order: true, contact: true },
-  seo: { title: 'Chicken Bros | Fast Food Paris 18', menuTitle: 'Menu Chicken Bros | Burgers, Chicken, Wraps & Naans', contactTitle: 'Chicken Bros Paris 18 | Adresse & Horaires', description: 'Découvrez Chicken Bros au 92 Avenue de Saint-Ouen, Paris 18 : burgers, chicken, wraps, naans, biryani, plats et bien plus. Sur place, à emporter ou en livraison.', keywords: 'Chicken Bros, fast food Paris 18, burgers, chicken, wraps, naans, biryani', ogImage: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1200' },
+  seo: {
+    siteUrl: 'https://chickenbros.fr',
+    siteName: 'Chicken Bros',
+    locale: 'fr_FR',
+    type: 'website',
+    keywords: 'Chicken Bros, fast food Paris 18, burgers, chicken, wraps, naans, biryani',
+    // Replace with /images/seo/chicken-bros-og.webp once the approved 1200 × 630 asset is supplied.
+    ogImage: '/images/hero/hero-burger.png',
+    pages: {
+      home: {
+        title: 'Chicken Bros Paris 18 | Burgers, Chicken, Wraps & Naans',
+        description: 'Chicken Bros à Paris 18 : burgers, chicken, wraps, naans, biryani et plats généreux. Sur place, à emporter ou en livraison au 92 Avenue de Saint-Ouen.',
+        path: '/',
+      },
+      menu: {
+        title: 'Menu Chicken Bros | Burgers, Chicken & Naans Paris 18',
+        description: 'Découvrez le menu Chicken Bros à Paris 18 : burgers, tenders, wings, wraps, naans, biryani, crousty, plats, salades et accompagnements.',
+        path: '/menu',
+      },
+      contact: {
+        title: 'Chicken Bros Paris 18 | Adresse, Horaires & Commande',
+        description: 'Retrouvez Chicken Bros au 92 Avenue de Saint-Ouen, 75018 Paris. Ouvert 7j/7 de 11h00 à 00h00. Commandez sur Uber Eats ou Deliveroo.',
+        path: '/contact',
+      },
+    },
+  },
 };

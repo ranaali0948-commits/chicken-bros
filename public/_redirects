@@ -1,1 +1,5 @@
+/menu /menu.html 200
+/menu/ /menu 301
+/contact /contact.html 200
+/contact/ /contact 301
 /* /index.html 200

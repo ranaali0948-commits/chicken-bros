@@ -1,5 +1,6 @@
 export interface OpeningHours { label: string; value: string }
 export interface NavigationItem { label: string; href: string }
+export interface SeoPage { title: string; description: string; path: '/' | '/menu' | '/contact' }
 
 export interface RestaurantConfig {
   businessName: string; shortName: string; tagline: string; description: string; logo: string; favicon: string;
@@ -18,5 +19,13 @@ export interface RestaurantConfig {
   contact: { eyebrow: string; heading: string; highlightedHeading: string; description: string; promptHeading: string; promptDescription: string; callLabel: string; directionsLabel: string; orderLabel: string };
   footer: { tagline: string; rightsText: string };
   sections: { hero: boolean; menu: boolean; about: boolean; gallery: boolean; reviews: boolean; order: boolean; contact: boolean };
-  seo: { title: string; menuTitle: string; contactTitle: string; description: string; keywords: string; ogImage: string };
+  seo: {
+    siteUrl: string;
+    siteName: string;
+    locale: string;
+    type: 'website';
+    keywords: string;
+    ogImage: string;
+    pages: { home: SeoPage; menu: SeoPage; contact: SeoPage };
+  };
 }

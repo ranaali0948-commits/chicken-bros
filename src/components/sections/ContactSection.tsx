@@ -2,9 +2,10 @@ import { Clock, MapPin, Phone } from 'lucide-react';
 import { restaurant } from '../../config/restaurant';
 import { SectionLabel } from '../ui/SectionHeading';
 import { scrollToOrder } from '../../utils/scrollToSection';
-export function ContactSection() {
+export function ContactSection({ headingLevel = 'h2' }: { headingLevel?: 'h1' | 'h2' }) {
+  const Heading = headingLevel;
   return <section id="contact" className="bg-background-alt py-16 sm:py-20 px-5"><div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 items-start">
-    <div><SectionLabel>{restaurant.contact.eyebrow}</SectionLabel><h2 className="font-display text-4xl sm:text-5xl font-black text-heading">{restaurant.contact.heading}{restaurant.contact.highlightedHeading && <span className="block text-accent">{restaurant.contact.highlightedHeading}</span>}</h2><p className="text-muted mt-5">{restaurant.contact.description}</p><div className="mt-8 space-y-4">
+    <div><SectionLabel>{restaurant.contact.eyebrow}</SectionLabel><Heading className="font-display text-4xl sm:text-5xl font-black text-heading">{restaurant.contact.heading}{restaurant.contact.highlightedHeading && <span className="block text-accent">{restaurant.contact.highlightedHeading}</span>}</Heading><p className="text-muted mt-5">{restaurant.contact.description}</p><div className="mt-8 space-y-4">
       <div className="detail-row"><MapPin/><div><span>Adresse</span><strong>{restaurant.address}<br/>{restaurant.postcode} {restaurant.city}</strong></div></div>
       <div className="detail-row"><Phone/><div><span>Téléphone</span><strong>{restaurant.phoneDisplay}</strong></div></div>
       <div className="detail-row"><Clock/><div><span>Horaires</span><strong>{restaurant.openingHours[0].label}<br/>{restaurant.openingHours[0].value}</strong></div></div>
