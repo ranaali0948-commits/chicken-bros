@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ShoppingBag } from 'lucide-react';
 import { menu } from '../data/menu';
 import { restaurant } from '../config/restaurant';
@@ -37,6 +37,7 @@ const categoryLooks: Record<string, { bg: string; ink: string; accent: string }>
 export function MenuPage({ route }: MenuPageProps) {
   const [activeCategory, setActiveCategory] = useState(categoryFromUrl);
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
+  const categoryListRef = useRef<HTMLDivElement>(null);
 
   const category = useMemo(
     () => menu.categories.find(item => item.id === activeCategory) ?? menu.categories[0],
@@ -53,7 +54,17 @@ export function MenuPage({ route }: MenuPageProps) {
   const selectCategory = (id: string) => {
     setSelectedItem(null);
     setActiveCategory(id);
-    navigate(`/menu?category=${id}`);
+    if (id !== activeCategory) navigate(`/menu?category=${id}`);
+    window.requestAnimationFrame(() => {
+      categoryListRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  };
+
+  const openProduct = (item: MenuItem) => {
+    setSelectedItem(item);
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    });
   };
 
   const productImage = selectedItem?.image || category.image;
@@ -207,7 +218,7 @@ export function MenuPage({ route }: MenuPageProps) {
           </nav>
         </div>
 
-        <div className="grid gap-7 pt-9 lg:grid-cols-[.72fr_1.28fr] lg:gap-12 lg:pt-12">
+        <div ref={categoryListRef} className="scroll-mt-36 grid gap-7 pt-9 lg:grid-cols-[.72fr_1.28fr] lg:gap-12 lg:pt-12">
           <div className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] sm:min-h-[480px] lg:sticky lg:top-40 lg:h-[620px]">
             <FallbackImage
               key={category.id}
@@ -244,7 +255,7 @@ export function MenuPage({ route }: MenuPageProps) {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setSelectedItem(item)}
+                  onClick={() => openProduct(item)}
                   className="group relative min-h-[270px] overflow-hidden rounded-[1.4rem] border border-white/15 bg-white/[.055] p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:min-h-[315px] sm:p-5"
                 >
                   <span className="absolute right-4 top-4 z-20 text-[10px] font-black tracking-[.16em] text-white/35">
