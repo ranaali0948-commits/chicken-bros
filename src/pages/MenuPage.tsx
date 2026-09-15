@@ -91,7 +91,7 @@ export function MenuPage({ route }: MenuPageProps) {
             Tous les produits
           </button>
 
-          <div className="grid min-h-[620px] items-center gap-8 pb-8 pt-20 lg:grid-cols-[.9fr_1.1fr] lg:gap-6 lg:py-0">
+          <div className="grid min-h-[620px] items-center gap-7 pb-10 pt-20 sm:gap-9 lg:grid-cols-[.9fr_1.1fr] lg:gap-6 lg:py-0">
             <div className="contents lg:relative lg:z-20 lg:block lg:max-w-xl">
               <div className="order-1">
                 <p
@@ -120,7 +120,7 @@ export function MenuPage({ route }: MenuPageProps) {
                 )}
               </div>
 
-              <div className="order-3 flex flex-wrap items-center gap-4 lg:mt-8">
+              <div className="order-3 flex flex-wrap items-center gap-4 py-1 lg:mt-8 lg:py-0">
                 <strong className="font-display text-4xl font-black tracking-[-.05em]">
                   {selectedItem.price}
                 </strong>
@@ -139,7 +139,7 @@ export function MenuPage({ route }: MenuPageProps) {
                 )}
               </div>
 
-              <div className="order-4 grid max-w-lg grid-cols-3 border-y lg:mt-10" style={{ borderColor: `${look.ink}55` }}>
+              <div className="order-4 grid w-full max-w-lg grid-cols-3 border-y lg:mt-10" style={{ borderColor: `${look.ink}55` }}>
                 <div className="py-4 pr-3">
                   <span className="block text-[9px] font-black uppercase tracking-[.2em] opacity-55">Catégorie</span>
                   <strong className="mt-1 block text-xs uppercase">{category.name}</strong>
@@ -155,13 +155,13 @@ export function MenuPage({ route }: MenuPageProps) {
               </div>
             </div>
 
-            <div className="relative order-2 flex min-h-[420px] items-center justify-center lg:order-none lg:min-h-[650px]">
+            <div className="relative order-2 flex min-h-[340px] items-center justify-center sm:min-h-[460px] lg:order-none lg:min-h-[650px]">
               <span
                 aria-hidden="true"
                 className="absolute h-[72%] w-[72%] rounded-full border-[38px] opacity-20 sm:border-[55px]"
                 style={{ borderColor: look.accent }}
               />
-              <div className="relative z-10 h-[390px] w-full max-w-[640px] overflow-hidden sm:h-[520px] lg:h-[610px]">
+              <div className="relative z-10 h-[320px] w-full max-w-[640px] overflow-hidden sm:h-[440px] lg:h-[610px]">
                 <FallbackImage
                   key={`${category.id}-${selectedItem.id}`}
                   src={productImage}
