@@ -46,6 +46,12 @@ export const restaurant: RestaurantConfig = {
   order: { eyebrow: 'Commander', heading: 'VOTRE CHICKEN BROS, OÙ VOUS VOULEZ.', description: 'Commandez en quelques clics sur votre plateforme préférée.', uberEatsLabel: 'Commander sur Uber Eats', deliverooLabel: 'Commander sur Deliveroo', clickAndCollectLabel: 'Click & Collect', missingLinkLabel: 'Lien à ajouter' },
   map: { eyebrow: 'Nous trouver', heading: 'CHICKEN BROS · PARIS 18', buttonLabel: 'Ouvrir dans Google Maps' },
   contact: { eyebrow: 'Contact', heading: 'VENEZ CHEZ', highlightedHeading: 'CHICKEN BROS', description: 'Sur place, à emporter ou en livraison : nous sommes ouverts tous les jours.', promptHeading: 'UNE ENVIE DE CHICKEN BROS ?', promptDescription: 'Appelez-nous, trouvez votre itinéraire ou commandez auprès de votre plateforme préférée.', callLabel: 'Appeler', directionsLabel: 'Itinéraire', orderLabel: 'Commander' },
+  homeSeo: {
+    heading: 'Fast food & fried chicken à Paris 18',
+    description: 'Chicken Bros vous accueille au 92 Avenue de Saint-Ouen, dans le 18e arrondissement de Paris. Découvrez nos burgers, fried chicken, tenders, wraps, naans, biryanis et plats généreux. Commandez en livraison, à emporter ou venez profiter de votre repas sur place.',
+    menuLabel: 'Voir le menu',
+    contactLabel: 'Nous trouver à Paris 18',
+  },
   footer: { tagline: 'Fast Food', rightsText: 'Tous droits réservés.' },
   sections: { hero: true, menu: true, about: true, gallery: true, reviews: false, order: true, contact: true },
   seo: {
@@ -58,8 +64,8 @@ export const restaurant: RestaurantConfig = {
     ogImage: '/images/hero/hero-burger.png',
     pages: {
       home: {
-        title: 'Chicken Bros Paris 18 | Burgers, Chicken, Wraps & Naans',
-        description: 'Chicken Bros à Paris 18 : burgers, chicken, wraps, naans, biryani et plats généreux. Sur place, à emporter ou en livraison au 92 Avenue de Saint-Ouen.',
+        title: 'Chicken Bros Paris 18 | Fast Food, Fried Chicken & Burgers',
+        description: 'Chicken Bros, fast food à Paris 18 : burgers, fried chicken, tenders, wraps, naans et biryanis. Sur place, à emporter ou en livraison.',
         path: '/',
       },
       menu: {

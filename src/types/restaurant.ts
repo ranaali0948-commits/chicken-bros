@@ -17,6 +17,7 @@ export interface RestaurantConfig {
   order: { eyebrow: string; heading: string; description: string; uberEatsLabel: string; deliverooLabel: string; clickAndCollectLabel: string; missingLinkLabel: string };
   map: { eyebrow: string; heading: string; buttonLabel: string };
   contact: { eyebrow: string; heading: string; highlightedHeading: string; description: string; promptHeading: string; promptDescription: string; callLabel: string; directionsLabel: string; orderLabel: string };
+  homeSeo: { heading: string; description: string; menuLabel: string; contactLabel: string };
   footer: { tagline: string; rightsText: string };
   sections: { hero: boolean; menu: boolean; about: boolean; gallery: boolean; reviews: boolean; order: boolean; contact: boolean };
   seo: {
