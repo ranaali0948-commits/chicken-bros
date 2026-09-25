@@ -269,7 +269,7 @@ export function MenuPage({ route }: MenuPageProps) {
                       src={item.image || category.image}
                       fallbackSrc={item.fallbackImage || category.fallbackImage}
                       alt=""
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
 
