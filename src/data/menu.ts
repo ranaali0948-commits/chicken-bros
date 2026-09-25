@@ -66,8 +66,21 @@ const productImages: Record<string, string> = {
   '6 Chili Cheese': '/images/menu/extras-chili-cheese.jpg',
 };
 
+const productImagePositions: Record<string, string> = {
+  'Filet Chicken': '50% 55%',
+  'Empire Filet': '50% 55%',
+  'Chicken Tikka': '50% 55%',
+  'Chicken Steak': '50% 55%',
+  'Cheese Burger': '50% 55%',
+  'Tender Wrap & Naan': '50% 56%',
+  'Cheese Naan': '50% 56%',
+  'Poulet Biryani': '50% 54%',
+  'Signature Chicken Bros': '50% 58%',
+};
+
 const item = (category: string, name: string, price: string, description = '', featured = false, image?: string): MenuItem => ({
-  id: ++id, category, name, price, description, featured, image: productImages[name] ?? image, available: true, dietaryTags: [],
+  id: ++id, category, name, price, description, featured, image: productImages[name] ?? image,
+  imagePosition: productImagePositions[name], available: true, dietaryTags: [],
 });
 
 const images = {

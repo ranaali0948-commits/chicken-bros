@@ -270,6 +270,7 @@ export function MenuPage({ route }: MenuPageProps) {
                       fallbackSrc={item.fallbackImage || category.fallbackImage}
                       alt=""
                       className="transition-transform duration-500 group-hover:scale-[1.015]"
+                      style={{ objectPosition: item.imagePosition ?? '50% 50%' }}
                     />
                   </div>
 

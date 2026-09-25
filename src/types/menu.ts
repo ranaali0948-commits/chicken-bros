@@ -4,6 +4,7 @@ export interface MenuItem {
   description: string;
   price: string;
   image?: string;
+  imagePosition?: string;
   fallbackImage?: string;
   badge?: string;
   featured?: boolean;
