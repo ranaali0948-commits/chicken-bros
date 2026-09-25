@@ -161,13 +161,13 @@ export function MenuPage({ route }: MenuPageProps) {
                 className="absolute h-[72%] w-[72%] rounded-full border-[38px] opacity-20 sm:border-[55px]"
                 style={{ borderColor: look.accent }}
               />
-              <div className="relative z-10 h-[320px] w-full max-w-[640px] overflow-hidden sm:h-[440px] lg:h-[610px]">
+              <div className="relative z-10 aspect-square w-full max-w-[610px] overflow-hidden rounded-[1.8rem] border border-white/20 bg-white/10 p-3 shadow-[0_30px_70px_rgba(0,0,0,.16)] sm:p-5">
                 <FallbackImage
                   key={`${category.id}-${selectedItem.id}`}
                   src={productImage}
                   fallbackSrc={productFallback}
                   alt={selectedItem.name}
-                  className="h-full w-full object-contain drop-shadow-[0_35px_28px_rgba(0,0,0,.28)] transition-all duration-500"
+                  className="h-full w-full rounded-[1.25rem] object-contain drop-shadow-[0_24px_24px_rgba(0,0,0,.2)] transition-all duration-500"
                 />
               </div>
 
@@ -266,26 +266,26 @@ export function MenuPage({ route }: MenuPageProps) {
                   key={item.id}
                   type="button"
                   onClick={() => openProduct(item)}
-                  className="group relative min-h-[270px] overflow-hidden rounded-[1.4rem] border border-white/15 bg-white/[.055] p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:min-h-[315px] sm:p-5"
+                  className="group relative flex min-h-[310px] flex-col overflow-hidden rounded-[1.4rem] border border-white/15 bg-white/[.055] p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:min-h-[365px] sm:p-5"
                 >
                   <span className="absolute right-4 top-4 z-20 text-[10px] font-black tracking-[.16em] text-white/35">
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
-                  <div className="relative h-[155px] sm:h-[190px]">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-[1rem] border border-white/10 bg-white/[.045] p-2 sm:p-3">
                     <FallbackImage
                       src={item.image || category.image}
                       fallbackSrc={item.fallbackImage || category.fallbackImage}
                       alt=""
-                      className="h-full w-full object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,.22)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                      className="h-full w-full rounded-[.7rem] object-contain drop-shadow-[0_14px_16px_rgba(0,0,0,.18)] transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
 
-                  <div className="mt-3">
+                  <div className="mt-4 flex flex-1 flex-col">
                     <p className="font-display text-lg font-black uppercase leading-[.95] tracking-[-.025em] sm:text-xl">
                       {item.name}
                     </p>
-                    <div className="mt-4 flex items-center justify-between gap-3">
+                    <div className="mt-auto flex items-center justify-between gap-3 pt-5">
                       <strong className="text-base text-primary">{item.price}</strong>
                       <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-heading">
                         <ArrowRight size={14} />
