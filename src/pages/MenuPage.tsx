@@ -260,7 +260,7 @@ export function MenuPage({ route }: MenuPageProps) {
                   onClick={() => openProduct(item)}
                   className="group relative flex min-h-[310px] flex-col overflow-hidden rounded-[1.4rem] border border-white/15 bg-white/[.055] p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:min-h-[365px] sm:p-5"
                 >
-                  <span className="absolute right-3 top-3 z-20 text-[10px] font-black leading-none tracking-[.16em] text-white/40 sm:right-4 sm:top-4">
+                  <span className="absolute right-2.5 top-2.5 z-20 text-[10px] font-black leading-none tracking-[.16em] text-white/40">
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
