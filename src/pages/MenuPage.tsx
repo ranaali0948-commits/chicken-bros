@@ -161,13 +161,13 @@ export function MenuPage({ route }: MenuPageProps) {
                 className="absolute h-[72%] w-[72%] rounded-full border-[38px] opacity-20 sm:border-[55px]"
                 style={{ borderColor: look.accent }}
               />
-              <div className="relative z-10 aspect-square w-[72%] max-w-[520px] overflow-hidden rounded-full">
+              <div className="product-detail-media">
                 <FallbackImage
                   key={`${category.id}-${selectedItem.id}`}
                   src={productImage}
                   fallbackSrc={productFallback}
                   alt={selectedItem.name}
-                  className="h-full w-full object-contain transition-all duration-500"
+                  className="transition-all duration-500"
                 />
               </div>
 
@@ -221,13 +221,13 @@ export function MenuPage({ route }: MenuPageProps) {
         </div>
 
         <div ref={categoryListRef} className="scroll-mt-36 grid gap-7 pt-9 lg:grid-cols-[.72fr_1.28fr] lg:gap-12 lg:pt-12">
-          <div className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] sm:min-h-[480px] lg:sticky lg:top-40 lg:h-[620px]">
+          <div className="category-feature-media lg:sticky lg:top-40">
             <FallbackImage
               key={category.id}
               src={category.image}
               fallbackSrc={category.fallbackImage}
               alt={category.name}
-              className="absolute inset-0 z-10 h-full w-full object-contain transition-all duration-500"
+              className="z-10 transition-all duration-500"
             />
             <span className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 z-30 p-6 sm:p-8">
@@ -264,12 +264,12 @@ export function MenuPage({ route }: MenuPageProps) {
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
-                  <div className="relative aspect-square w-full overflow-hidden rounded-[1rem] border border-white/10">
+                  <div className="menu-card-media">
                     <FallbackImage
                       src={item.image || category.image}
                       fallbackSrc={item.fallbackImage || category.fallbackImage}
                       alt=""
-                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
 
