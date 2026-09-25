@@ -227,7 +227,7 @@ export function MenuPage({ route }: MenuPageProps) {
               src={category.image}
               fallbackSrc={category.fallbackImage}
               alt={category.name}
-              className="absolute inset-0 z-10 h-full w-full object-cover transition-all duration-500"
+              className="absolute inset-0 z-10 h-full w-full object-contain transition-all duration-500"
             />
             <span className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 z-30 p-6 sm:p-8">
