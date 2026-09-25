@@ -161,13 +161,13 @@ export function MenuPage({ route }: MenuPageProps) {
                 className="absolute h-[72%] w-[72%] rounded-full border-[38px] opacity-20 sm:border-[55px]"
                 style={{ borderColor: look.accent }}
               />
-              <div className="relative z-10 aspect-square w-full max-w-[610px] overflow-hidden rounded-[1.8rem] border border-white/20 bg-white/10 p-3 shadow-[0_30px_70px_rgba(0,0,0,.16)] sm:p-5">
+              <div className="relative z-10 aspect-square w-[72%] max-w-[520px] overflow-hidden rounded-full">
                 <FallbackImage
                   key={`${category.id}-${selectedItem.id}`}
                   src={productImage}
                   fallbackSrc={productFallback}
                   alt={selectedItem.name}
-                  className="h-full w-full rounded-[1.25rem] object-contain drop-shadow-[0_24px_24px_rgba(0,0,0,.2)] transition-all duration-500"
+                  className="h-full w-full object-contain transition-all duration-500"
                 />
               </div>
 
@@ -223,19 +223,11 @@ export function MenuPage({ route }: MenuPageProps) {
         <div ref={categoryListRef} className="scroll-mt-36 grid gap-7 pt-9 lg:grid-cols-[.72fr_1.28fr] lg:gap-12 lg:pt-12">
           <div className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] sm:min-h-[480px] lg:sticky lg:top-40 lg:h-[620px]">
             <FallbackImage
-              key={`${category.id}-background`}
-              src={category.image}
-              fallbackSrc={category.fallbackImage}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-xl transition-all duration-500"
-            />
-            <FallbackImage
               key={category.id}
               src={category.image}
               fallbackSrc={category.fallbackImage}
               alt={category.name}
-              className="absolute inset-0 z-10 h-full w-full object-contain transition-all duration-500"
+              className="absolute inset-0 z-10 h-full w-full object-cover transition-all duration-500"
             />
             <span className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 z-30 p-6 sm:p-8">
@@ -272,12 +264,12 @@ export function MenuPage({ route }: MenuPageProps) {
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
-                  <div className="relative aspect-square w-full overflow-hidden rounded-[1rem] border border-white/10 bg-white/[.045] p-2 sm:p-3">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-[1rem] border border-white/10">
                     <FallbackImage
                       src={item.image || category.image}
                       fallbackSrc={item.fallbackImage || category.fallbackImage}
                       alt=""
-                      className="h-full w-full rounded-[.7rem] object-contain drop-shadow-[0_14px_16px_rgba(0,0,0,.18)] transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
 
