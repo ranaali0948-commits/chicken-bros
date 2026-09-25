@@ -36,7 +36,7 @@
   .organic-shape { border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%; transform: rotate(-4deg); }
   .menu-tabs { scrollbar-width: thin; scrollbar-color: var(--color-border) transparent; }
   .menu-card-media { @apply relative block aspect-[4/3] w-full overflow-hidden rounded-[1rem] border border-white/10; }
-  .menu-card-media > img { @apply block h-full w-full object-cover object-center; }
+  .menu-card-media > img { @apply block h-full w-full object-contain object-center; }
   .category-feature-media { @apply relative block aspect-[4/3] w-full overflow-hidden rounded-[1.8rem] sm:aspect-[5/4] lg:aspect-[4/5]; }
   .category-feature-media > img { @apply absolute inset-0 block h-full w-full object-cover object-center; }
   .product-detail-media { @apply relative z-10 block aspect-[4/3] w-full max-w-[640px] overflow-hidden rounded-[1.6rem]; }

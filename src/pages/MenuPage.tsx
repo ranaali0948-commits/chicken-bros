@@ -260,7 +260,7 @@ export function MenuPage({ route }: MenuPageProps) {
                   onClick={() => openProduct(item)}
                   className="group relative flex min-h-[310px] flex-col overflow-hidden rounded-[1.4rem] border border-white/15 bg-white/[.055] p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary sm:min-h-[365px] sm:p-5"
                 >
-                  <span className="absolute right-4 top-4 z-20 text-[10px] font-black tracking-[.16em] text-white/35">
+                  <span className="absolute right-3 top-3 z-20 text-[10px] font-black leading-none tracking-[.16em] text-white/40 sm:right-4 sm:top-4">
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
@@ -269,7 +269,7 @@ export function MenuPage({ route }: MenuPageProps) {
                       src={item.image || category.image}
                       fallbackSrc={item.fallbackImage || category.fallbackImage}
                       alt=""
-                      className="transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="transition-transform duration-500 group-hover:scale-[1.015]"
                     />
                   </div>
 
