@@ -223,14 +223,22 @@ export function MenuPage({ route }: MenuPageProps) {
         <div ref={categoryListRef} className="scroll-mt-36 grid gap-7 pt-9 lg:grid-cols-[.72fr_1.28fr] lg:gap-12 lg:pt-12">
           <div className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] sm:min-h-[480px] lg:sticky lg:top-40 lg:h-[620px]">
             <FallbackImage
+              key={`${category.id}-background`}
+              src={category.image}
+              fallbackSrc={category.fallbackImage}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-xl transition-all duration-500"
+            />
+            <FallbackImage
               key={category.id}
               src={category.image}
               fallbackSrc={category.fallbackImage}
               alt={category.name}
-              className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
+              className="absolute inset-0 z-10 h-full w-full object-contain transition-all duration-500"
             />
-            <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+            <span className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 z-30 p-6 sm:p-8">
               <p className="text-[10px] font-black uppercase tracking-[.24em] text-primary">Catégorie</p>
               <h2 className="mt-2 font-display text-[clamp(2.8rem,5vw,5.5rem)] font-black uppercase leading-[.82] tracking-[-.06em]">
                 {category.name}
